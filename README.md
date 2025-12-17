@@ -1,9 +1,9 @@
-# telegram-notifier-py
-Service to send telegram bot notification messages
+# push-notifier-service
+Service to send pushover notification messages
 
 
 ## How to use
-Setup: Paste telegram bot API Key to .apikey
+Setup: Paste pushover API Key to .apikey and User Key to .userkey
 
 To build an image:
 > make build

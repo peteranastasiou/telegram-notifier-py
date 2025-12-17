@@ -3,8 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
-# Don't git commit the api key!
+# Don't git commit the api keys!
 .apikey
+.userkey
 
 # C extensions
 *.so

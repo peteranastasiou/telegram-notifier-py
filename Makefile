@@ -1,9 +1,12 @@
 
-TELEGRAM_BOT_APIKEY=`cat .apikey`
+PUSHOVER_APIKEY=`cat .apikey`
+PUSHOVER_USERKEY=`cat .userkey`
 
 build:
-	echo ${TELEGRAM_BOT_APIKEY}
-	sudo docker build --build-arg TELEGRAM_BOT_APIKEY=${TELEGRAM_BOT_APIKEY} -t telegram-notifier-py .
+	sudo docker build \
+		--build-arg PUSHOVER_APIKEY=${PUSHOVER_APIKEY} \
+		--build-arg PUSHOVER_USERKEY=${PUSHOVER_USERKEY} \
+		-t push-notifier-service .
 
 run: build
-	sudo docker run -p 80:80 telegram-notifier-py
+	sudo docker run -p 80:80 push-notifier-service
